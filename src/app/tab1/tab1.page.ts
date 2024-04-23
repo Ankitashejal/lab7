@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-tab1',
@@ -9,6 +10,11 @@ import { ExploreContainerComponent } from '../explore-container/explore-containe
   standalone: true,
   imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
-export class Tab1Page {
-  constructor() {}
+export class Tab1Page implements OnInit{
+  constructor(private dataservice : DataService) {}
+  
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+  
 }
